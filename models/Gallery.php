@@ -42,23 +42,27 @@ class Gallery
             return $fotoList;
         }
 
-        public static function getComment($page = 1){
-            $page = intval($page);
-            $offset = ($page - 1) * self::SHOW_BY_DEFAULT;
-
-            $db = Db::getConnection();
-
-            $commentList = array();
-            $result = $db->query("SELECT `user_id`, `foto_id`, `comment` FROM `comment`");
+        public static function getComment($foto_id){
+            $foto_id = intval($foto_id);
+            $db     = DB::getConnection();
+            $sql    = 'SELECT * FROM comment WHERE  foto_id = :foto_id';
+            $result = $db->prepare($sql);
+            $result->bindParam(':foto_id', $foto_id, PDO::PARAM_INT);
+            $result->setFetchMode(PDO::FETCH_ASSOC);
+            $result->execute();
+            $com_arr  = array();
             $i = 0;
-            while ($row = $result->fetch()) {
-                $commentList[$i]['user_id'] = $row['user_id'];
-                $commentList[$i]['foto_id'] = $row['foto_id'];
-                $commentList[$i]['comment'] = $row['comment'];
-                $commentList[$i]['autor'] = User::getUserById($commentList[$i]['user_id'])['user_name'];
+            while($row = $result->fetch())
+            {
+                $com_arr[$i]['id'] = $row['id'];
+                $com_arr[$i]['user_id'] = $row['user_id'];
+                $com_arr[$i]['autor'] = User::getUserById($com_arr[$i]['user_id'])['user_name'];
+                $com_arr[$i]['foto_id'] = $row['foto_id'];
+                $com_arr[$i]['comment'] = '<code>'.$row['comment'].'</code>';
                 $i++;
             }
-            return $commentList;
+            return ($com_arr);
+
         }
 
 
@@ -151,17 +155,6 @@ class Gallery
         return $r['status'];
     }
 
-//    public static function getComment2($foto_id){
-//        $foto_id = intval($foto_id);
-//        $db = DB::getConnection();
-//        $comment = 'SELECT `comment` FROM `comment` WHERE `foto_id` = :foto_id';
-//        $result2 = $db->prepare($comment);
-//        $result2->bindParam(':foto_id', $foto_id, PDO::PARAM_INT);
-//        $result2->execute();
-//
-//        $r = $result2->fetch();
-//        return $r['comment'];
-//    }
 
     public static function putComment($name, $foto, $comment)
     {

@@ -1,6 +1,11 @@
 <?php include ROOT.'/views/header.php';?>
 <div class="foto_flex">
-        <div  id="el_1"> <button type="button" id="button" name="button"><img  width=50px src="/resurses/zat.png" width=100% ></button></div>
+        <div  id="el_1">
+            <button type="button" id="button" name="button"><img  width=50px src="/resurses/zat.png" width=100% ></button>
+
+            <button style="margin-top: 40%;" type="button" id="button8" name="button8">Download</button>
+<!--            <input id = "im"; style="display: block; width: 100px;margin-top: 30%" type="file" name="image" onchange="previewFile()" multiple accept="image/*,image/jpeg">-->
+        </div>
         <div class="elem_foto_cam" id="el_2"><video id="video" width="800" height="600" autoplay="autoplay"></video></div>
     <div id="el_3"> <canvas id="canvas" width="800" height="600"></canvas></div>
     <div id="el_4">
@@ -15,7 +20,6 @@
             <button type="button" id="frame" name="frame"><img  height="50px" src="/template/img/r1.png"></button>
             <button type="button" id="frame2" name="frame"><img  height="50px" src="/template/img/r4.png"></button>
             <button type="button" id="frame3" name="frame"><img  width="50px" src="/template/img/r5.png"></button>
-            <button type="button" id="button8" name="button8">Rotate</button>
             <button type="button" id="reset" name="frame">Reset</button>
             <button type="button" id="save" name="save">Save</button>
         </div>

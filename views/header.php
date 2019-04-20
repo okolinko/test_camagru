@@ -12,9 +12,9 @@
 <div class="flex-top">
     <img class="top-elem" src="/resurses/epos4am8qj4o.png" alt="">
     <?php if (isset($_SESSION['user_name'])): ?>
-        <div>Приветствуем вас,  <?php echo ' '.$_SESSION['lol'].'!';?></div>
+        <div><span class="com"> Приветствуем вас,</span> <span style="color: darkred; margin-left: 5% "> <?php echo ' '.$_SESSION['lol'].'!';?></span></div>
     <?php else: ?>
-        <div>Приветствуем вас, <span style="color: blueviolet">Гость</span>!</div>
+        <div><span class="com">Приветствуем вас,</span> <span style="color: darkred">Гость</span>!</div>
     <?php endif; ?>
 </div>
 <br>

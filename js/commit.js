@@ -1,44 +1,39 @@
+document.getElementById('submit').addEventListener('click', function () {
+    // var test = new Object();
+    text = document.getElementById('comment').value;
 
+    if (text.length > 0 && text.length < 200) {
 
-var comment = document.getElementById('comment');
-var submit = document.getElementById('submit');
+        var id_photo = document.getElementById("img4").getAttribute('data-value');
 
+        var demo = (document.getElementById("demo"));
+        var name_user = demo.getAttribute("name_user");
+        var cont = document.getElementById('cont');
 
-var foto = document.getElementById("img4");
+        var xhr = new XMLHttpRequest();
 
-var cont = document.getElementById('cont');
-
-var id_foto = foto.getAttribute("data-value");
-
-    console.log(cont);
-
-var addComment = function()
-{
-    var text = comment.value;
-    if (text.length > 0)
-    {
-        var xhr = new XMLHttpRequest();          // Создание объекта для HTTP запроса.
-        xhr.open("POST", "/gallery/comment/", true); // Настройка объекта для отправки синхронного GET запроса
+        xhr.open("POST", "/gallery/comment", false);
 
         xhr.onreadystatechange = function () {
-            if (xhr.readyState == 4 && xhr.status == 200) { // если получен ответ  и если статус код ответа 200
-                    if ( xhr.responseText.indexOf("ввойдите в систему") == -1){// responseText - текст ответа полученного с сервера.
-                        var div = document.createElement('div');
-                        // console.log(xhr.responseText);
-                        div.innerHTML = '<span class="commentin">'+xhr.responseText+'</span>: '+'<plaintext>' + text + '</plaintext>';
-                        // cont.appendChild(div);
-                    }
-                    else
-                        location.assign('/user/login');
-                }
-
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                if (xhr.responseText) {
+                    var div = document.createElement('div');
+                    // console.log(xhr.responseText);
+                    div.className = "commentin";
+                    div.innerHTML = '<span class="name">' + name_user + "  : " + '</span>' + '<span class="com">' + text + '</span>';
+                    cont.appendChild(div);
+                } else
+                    location.assign('/user/login');
+                // var array = JSON.parse(xhr.responseText);
+                //
+                // console.log(array);
+            }
         }
         xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-        alert('comment=' + text)
-        xhr.send('comment=' + text + '&foto=' + id_foto);
-        // Отправка запроса, так как запрос является синхронным, следующая строка кода выполнится только после получения ответа со стороны сервера.
+        xhr.send('comment=' + JSON.stringify(text) + '&foto=' + id_photo);
     }
+    else{
+        alert("Коментарий не может быть пустым")
+    }
+});
 
-}
-
-submit.addEventListener('click', addComment);

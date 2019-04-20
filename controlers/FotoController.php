@@ -23,7 +23,7 @@ class FotoController
         else {
             $name = 'foto_'.$i;
 
-            $img = $user_id . '-foto_' . $i . '.jpg';
+            $img = $user_id . '-foto_' . $i . '.png';
 
             $res = Camera::putImage($img, $user_id, $name, $image);
 

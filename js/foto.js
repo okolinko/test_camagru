@@ -15,7 +15,6 @@ window.onload = function(){
     var button6 = $( 'button6');
     var button7 = $( 'button7');
     var button8 = $('button8');
-    var allow = $('allow');
     var frame1 = $('frame');
     var frame2 = $('frame2');
     var frame3 = $('frame3');
@@ -232,13 +231,20 @@ window.onload = function(){
         //var base64dataUrl = canvas.toDataURL('img/png');
     }
 
-    var rotate = function(){
-        //получаем обьект внутри канваса
-        var imageData = context.getImageData(0,0,canvas.width, canvas.height);
 
 
-        // кладем результат фильтрации обратно в canvas
-        context.putImageData(imageData, 0, 0);
+
+    var download = function(){
+
+        var img = new Image();
+        img.src = "/resurses/avatar.png";
+
+        img.onload = function() {
+            context.drawImage(img, 10, 10);
+        };
+
+        alert(1);
+        context.putImageData(img, 0, 0);
     }
 
 
@@ -319,7 +325,7 @@ window.onload = function(){
     button5.addEventListener('click', nose);
     button6.addEventListener('click', invert);
     button7.addEventListener('click', more);
-    button8.addEventListener('click', rotate);
+    button8.addEventListener('click', download);
     frame1.addEventListener('click', function() { frame("/template/img/r1.png");}, false);
     frame2.addEventListener('click', function() { frame("/template/img/r4.png");}, false);
     frame3.addEventListener('click', function() { frame("/template/img/r5.png");}, false);
@@ -340,33 +346,3 @@ window.onload = function(){
         console.log('что-то не так с видеостримом или пользователь запретил его использовать :P');
     });
 }
-
-// var canv=document.getElementById("img"),
-//     c=canv.getContext("2d");
-// function onfil(doc)
-// {
-//     var file=doc.files[0],
-//         fileread=new FileReader();
-//     fileread.onload=function()
-//     {
-//         var img=new Image();
-//         img.src=fileread.result;
-//         img.onload=function()
-//         {
-//             canv.width=img.width;
-//             canv.height=img.height;
-//             c.drawImage(img,0,0);
-//             c.font="60px Arial";
-//             var text="тут текст";
-//             c.fillText("тут текст",canv.width/2-text.length/2*30,canv.height/2-15);
-//         }
-//     }
-//     fileread.readAsDataURL(file);
-// };
-// function get()
-// {
-//     var link=document.createElement("a");
-//     link.download="download";
-//     link.href=canv.toDataURL(["image/png"]);
-//     link.click();
-// }

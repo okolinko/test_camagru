@@ -213,5 +213,43 @@ class User{
         return $result->execute();
     }
 
+    public static function getUserFoto($user)
+    {
+        if ($user)
+        {
+            $db = Db::getConnection();
+            $sql = 'SELECT * FROM foto WHERE user_id = :user_id';
+
+            $result = $db->prepare($sql);
+            $result->bindParam(':user_id', $user, PDO::PARAM_STR);
+
+            // Указываем, что хотим получить данные в виде массива
+            $result->setFetchMode(PDO::FETCH_ASSOC);
+            $result->execute();
+            $i = 0;
+            $userFoto = array();
+            while($row = $result->fetch())
+            {
+                $userFoto[$i]['id'] = $row['id'];
+                $userFoto[$i]['user_id'] = $row['user_id'];
+                $userFoto[$i]['img'] = $row['img'];
+                $i++;
+            }
+            return($userFoto);
+        }
+    }
+
+
+    public static function delImg($foto)
+    {
+        $id = intval($foto);
+        $db      = DB::getConnection();
+        $sql     = "DELETE FROM foto WHERE id = :id; DELETE FROM like_photo WHERE foto_id = :id;";
+        $result = $db->prepare($sql);
+        $result->bindParam(':id', $id, PDO::PARAM_INT);
+        $result->execute();
+        return $result->execute();
+    }
+
 }
 

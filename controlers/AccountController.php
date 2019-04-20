@@ -12,6 +12,7 @@ class AccountController
         // Получаем информацию о пользователе из БД
         $user = User::getUserById($userId);
 
+        $foto = User::getUserFoto($userId);
 
         require_once(ROOT . '/views/accaunt.php');
         return (true);
@@ -74,5 +75,14 @@ class AccountController
         }
         else
             echo "Админа удалить нельзя";
+    }
+
+    public function actionDelimg()
+    {
+        $foto    = $_POST['foto'];
+        $res = User::delImg($foto);
+        if ($res === true)
+            echo "true";
+        return true;
     }
 }

@@ -24,7 +24,7 @@
         <?php endif; ?>
     </div>
     <form method="post">
-        <input type="text" name="text" placeholder="Введите имя" required="required" value="<?php echo $name; ?>"/>
+        <input type="text" name="text" placeholder="Введите имя" required="required" value=""/>
         <input type="password" name="password" placeholder="Введите пароль" required="required" value=""/>
         <input type="password" name="password2" placeholder="Введите пароль ещё раз" required="required" value=""/>
         <input type="submit" name="submit" class="btn1" value="Сохранить" />

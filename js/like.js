@@ -43,28 +43,6 @@ if (im4) {
 }
 document.getElementById("like").addEventListener("click", like);
 
-var myAJAX2 = function(pathLine, id)
-{
-    var res;
-    // alert(3);
-    var xhr = new XMLHttpRequest();		// Создание объекта для HTTP запроса.
-    xhr.open("POST", pathLine, false); 		// Настройка объекта для отправки синхронного GET запроса
-
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState == 4 && xhr.status == 200) { // если получен ответ и если статус код ответа 200 i responseText - текст ответа полученного с сервера.
-            if ( xhr.responseText.indexOf("true") == -1)
-                res = false;
-            else
-                res = true;
-            console.log(xhr.responseText);
-        }
-    }
-
-    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-    xhr.send('gallery=' + id);
-    return (res);
-}
-
 var myAJAX3 = function(pathLine, idPhoto)
 {
     var res;
@@ -77,7 +55,7 @@ var myAJAX3 = function(pathLine, idPhoto)
                 res = false;
             else
                 res = true;
-            console.log(xhr.responseText);
+            // console.log(xhr.responseText);
         }
     }
 
@@ -96,9 +74,9 @@ function test1() {
     var like = document.getElementById("like").lastChild.lastChild;
 
 
-
     var min = document.getElementById("min1").lastChild.lastChild.lastChild;
     var big = document.getElementById("img4");
+
 
     var col = min.getAttribute("data_name");
     var status = min.getAttribute("data_status");
@@ -118,12 +96,14 @@ function test1() {
 
     big_col.innerHTML = col;
 
+
    if (myAJAX3("/gallery/getlike", min.getAttribute("data-value")) === true){
        like.setAttribute("src", active_like);
    }
    else {
        like.setAttribute("src", inactive_like);
    }
+
 }
 
 function test2() {
@@ -133,6 +113,8 @@ function test2() {
     var min = document.getElementById("min2").lastChild.lastChild.lastChild;
     var big = document.getElementById("img4");
 
+    // console.log(big);
+
     var like = document.getElementById("like").lastChild.lastChild;
 
     var col = min.getAttribute("data_name");
@@ -141,11 +123,11 @@ function test2() {
 
     var status = min.getAttribute("data_status");
 
-    console.log(status);
-
-
-    console.log("col",col);
-    console.log(min);
+    // console.log(status);
+    //
+    //
+    // console.log("col",col);
+    // console.log(min);
 
     big.removeAttribute("src");
     big.setAttribute("src", min.getAttribute("src"));
@@ -162,6 +144,7 @@ function test2() {
     else {
         like.setAttribute("src", inactive_like);
     }
+
 }
 
 function test3() {
@@ -177,7 +160,7 @@ function test3() {
 
     var big_col = document.getElementById("count");
 
-    console.log("col",col);
+    // console.log(big);
 
     big.removeAttribute("src");
     big.setAttribute("src", min.getAttribute("src"));
@@ -211,7 +194,7 @@ function test4() {
 
     var big_col = document.getElementById("count");
 
-    console.log("col",col);
+    // console.log(big);
 
     big.removeAttribute("src");
     big.setAttribute("src", min.getAttribute("src"));
@@ -292,8 +275,8 @@ var myAJAX = function(pathLine, img)
                 location.assign('/user/login');
         }
 
-            console.log(big.getAttribute("data-value"));
-        console.log(like.getAttribute("src"));
+            // console.log(big.getAttribute("data-value"));
+        // console.log(like.getAttribute("src"));
 
 
 
