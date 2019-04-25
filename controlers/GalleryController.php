@@ -12,21 +12,21 @@ class GalleryController{
     $gallerylist = Gallery::getGalleryList($page);
 
     $total = Gallery::getTotalFoto();
-//        if(!empty($_POST['foto_id'])){
-//            $this->id = $_POST['foto_id'];
-//        }
-//    echo true;
-    $id = 1;
+//var_dump($_SESSION['user_name']);
+//exit(1);
+        $name = Gallery::name();
+        if ($name == false)
+        {
+            $text = "Войдите в акканут чтобы открыть все функции";
+        }
+        else{
+            $userId = $_SESSION['user_name'];
+            $name_user = $_SESSION['lol'];
+            $commentsList = array();
+            $commentsList = Gallery::getComment($userId);
+            $text = "";
+        }
 
-    $commentsList = array();
-    $commentsList = Gallery::getComment($id);
-//    var_dump($commentsList["comment"]);
-//    exit(1);
-
-    $user_name = User::getUserById($_SESSION['user_name']);
-    $name_user = $user_name['user_name'];
-//    var_dump($user_name['user_name']);
-//    exit(1);
 
     $pagination = new Pagination($total, $page, Gallery::SHOW_BY_DEFAULT, 'page-');
 
@@ -36,7 +36,6 @@ class GalleryController{
     }
 
     public function actionAddlike(){
-        print_r($_POST['comment']);
         $foto    = $_POST['gallery'];
         $name = Gallery::name();
 
@@ -90,15 +89,29 @@ class GalleryController{
         $foto    = $_POST['foto'];
         $name = Gallery::name();
         if ($name == false)
-            echo false;
+            echo "false";
         else{
             Gallery::putComment($name, $foto, $comment);
-
+            echo "true";
         }
 
 //        $array = array("1","2","3");
 //
 //        print json_encode($array);
+
+        return true;
+    }
+
+    public function actionArrcommit(){
+        $id    = $_POST['idphoto'];
+        $commentsList = array();
+        $commentsList = Gallery::getComment($id);
+        $comm = array();
+        foreach ($commentsList as $comment)
+        {
+            array_push($comm, $comment);
+        }
+        print json_encode($comm);
 
         return true;
     }

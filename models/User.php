@@ -158,7 +158,7 @@ class User{
 
     public static function logout()
     {
-        session_start();
+
         unset($_SESSION["user_name"]);
     }
 

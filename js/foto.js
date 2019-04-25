@@ -288,7 +288,10 @@ window.onload = function(){
                     if ( xhr.responseText.indexOf("сохранилось") != -1)
                         put(true);
                     else
+                    {
+                        alert(1);
                         put(false);
+                    }
                 }
             }
         }
@@ -345,4 +348,19 @@ window.onload = function(){
     },function(){
         console.log('что-то не так с видеостримом или пользователь запретил его использовать :P');
     });
+
+
+    var menuStyle = getComputedStyle(menu);
+    openMenu.onclick = function () {
+        if (menuStyle.display == "none"){
+            menu.classList.add("active");
+            this.innerHTML = "Закрыть меню";
+        }
+        else {
+            menu.classList.remove("active");
+            this.innerHTML = "Открыть меню"
+        }
+    }
+
 }
+

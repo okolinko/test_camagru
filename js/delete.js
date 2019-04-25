@@ -17,7 +17,7 @@ function delimg(img){
             if ( xhr.responseText.indexOf("true") == -1)
             {
                 removeImg(img);
-                alert("Фото удалено")ж
+                alert("Фото удалено");
             }
 
         }

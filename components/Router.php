@@ -28,8 +28,8 @@ class Router
         if ($uri === '')
             $uri = 'main';
 
-        if ($this->routes[$uri] == null)
-            $uri = 'main/my404';
+//        if ($this->routes[$uri] == null)
+//            $uri = 'main/my404';
 
 //        for ($i = 0; $i < 18; $i++){
 //            if ($uri == $this->routes[$i]);

@@ -1,20 +1,23 @@
 <?php include ROOT.'/views/header.php';?>
 <?php if (isset($_SESSION['user_name'])): ?>
-    <div style="right:"> <span class="com"> Приветствуем вас,  <?php echo ' '.$user['user_name'].'!';?></span></div>
+    <div style="right:"> <span class="com"> Приветствуем вас,</span><span style="margin-left: 1%" class="user">  <?php echo ' '.$user['user_name'].'!';?></span></div>
 <?php //else: ?>
 <!--    <div><span class="com"> Приветствуем вас, </span><span style="color: blueviolet">Гость</span>!</div>-->
 <?php endif; ?>
 <div class="info_flex">
-    <div class="email"><p class="com"> Email: <?php echo $user['email']?></p></div>
-<!--    <a class="edit" href="/account/edit">Изменить пароль</a>-->
-    <form action="/account/edit/" method="post">
-        <input type="submit" value="Изменить пароль" />
+    <div class="email">
+        <p style="width: 100%; margin-left: -15%" class="com"> Email:<?php echo $user['email']?></p>
+    </div>
+    <div class="email">
+        <form action="/account/edit/" method="post">
+            <input style="width: 150%; margin-left: -28%" type="submit" value="Изменить пароль" />
     </form>
-    <br>
-<!--    <a class="edit" href="/account/delete">Удалить аккаунт</a>-->
-    <form action="/account/delete/" method="post">
-        <input type="submit" value="Удалить аккаунт" />
-    </form>
+    </div>
+    <div class="email">
+        <form action="/account/delete/" method="post">
+            <input style="width: 150%; margin-left: -20%" type="submit" value="Удалить аккаунт" />
+        </form>
+    </div>
 </div>
 <section class="wrap">
     <div class="foto_ac" >

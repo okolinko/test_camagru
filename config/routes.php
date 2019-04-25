@@ -4,12 +4,14 @@
      'main/my404' => 'main/my404',
      'main' => 'main/index',
 
-     'gallery/page-([0-9]+)' => 'gallery/list/$1',
+     'gallery/page-([0-9]+)'     => 'gallery/list/$1',
      'gallery/addlike'           => 'gallery/addlike',
      'gallery/dellike'           => 'gallery/dellike',
      'gallery/getlike'           => 'gallery/getlike',
 
-     'gallery/comment'        => 'gallery/comment',
+     'gallery/arrcommit'         => 'gallery/arrcommit',
+
+     'gallery/comment'           => 'gallery/comment',
 
      'gallery'				=> 'gallery/list',
 

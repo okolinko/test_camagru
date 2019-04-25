@@ -1,29 +1,3 @@
-// var $ = function(id)
-// {
-//     return (document.getElementById(id));
-// }
-//
-// window.onload = function(){
-//
-//     var like = $('like');
-//     var foto = $('foto');
-//     console.log(like);
-// // console.log(like);
-//     // like.onclick = function()
-//     // {
-//     //     console.log( 'Клик!' );
-//     //     var val = document.getElementById('demo').getAttribute('data-value');
-//     //     console.log(val);
-//     //
-//     // };
-//     var  addLike = function(){
-//         console.log( 'Клик!' );
-//             var val = document.getElementById('demo').getAttribute('data-value');
-//             console.log(val);
-//     }
-//
-//     like.addEventListener('click', addLike);
-// }
 var im1 = document.getElementById("min1");
 var im2 = document.getElementById("min2");
 var im3 = document.getElementById("min3");
@@ -55,13 +29,37 @@ var myAJAX3 = function(pathLine, idPhoto)
                 res = false;
             else
                 res = true;
-            // console.log(xhr.responseText);
         }
     }
-
     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhr.send('idPhoto=' + idPhoto);
     return (res);
+}
+
+var myAJAX4 = function(pathLine, id_photo){
+    var demo = (document.getElementById("demo"));
+    var name_user = demo.getAttribute("name_user");
+    var cont = document.getElementById('cont');
+    var xhr = new XMLHttpRequest();
+
+    xhr.open("POST", pathLine, false);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            if (xhr.responseText) {
+                var comment = new Object();
+                comment = JSON.parse(xhr.responseText);
+                for (i = 0; i < comment.length; i++){
+                    var div = document.createElement('div');
+                    div.className = "commentin";
+                    div.innerHTML = '<span class="name">' + comment[i]['autor'] + "  : " + '</span>' + '<span class="com">' + comment[i]['comment'] + '</span>';
+                    cont.appendChild(div);
+
+                }
+            }
+        }
+    }
+    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    xhr.send('idphoto=' + id_photo);
 }
 
 
@@ -104,6 +102,13 @@ function test1() {
        like.setAttribute("src", inactive_like);
    }
 
+    while(cont.hasChildNodes()){
+        cont.removeChild(cont.firstChild);
+    }
+
+   if (myAJAX4("/gallery/arrcommit", min.getAttribute("data-value")) === true){
+        console.log("Пошло");
+   }
 }
 
 function test2() {
@@ -113,8 +118,6 @@ function test2() {
     var min = document.getElementById("min2").lastChild.lastChild.lastChild;
     var big = document.getElementById("img4");
 
-    // console.log(big);
-
     var like = document.getElementById("like").lastChild.lastChild;
 
     var col = min.getAttribute("data_name");
@@ -123,11 +126,6 @@ function test2() {
 
     var status = min.getAttribute("data_status");
 
-    // console.log(status);
-    //
-    //
-    // console.log("col",col);
-    // console.log(min);
 
     big.removeAttribute("src");
     big.setAttribute("src", min.getAttribute("src"));
@@ -143,6 +141,14 @@ function test2() {
     }
     else {
         like.setAttribute("src", inactive_like);
+    }
+
+    while(cont.hasChildNodes()){
+        cont.removeChild(cont.firstChild);
+    }
+
+    if (myAJAX4("/gallery/arrcommit", min.getAttribute("data-value")) === true){
+        console.log("Пошло");
     }
 
 }
@@ -160,7 +166,6 @@ function test3() {
 
     var big_col = document.getElementById("count");
 
-    // console.log(big);
 
     big.removeAttribute("src");
     big.setAttribute("src", min.getAttribute("src"));
@@ -176,6 +181,14 @@ function test3() {
     }
     else {
         like.setAttribute("src", inactive_like);
+    }
+
+    while(cont.hasChildNodes()){
+        cont.removeChild(cont.firstChild);
+    }
+
+    if (myAJAX4("/gallery/arrcommit", min.getAttribute("data-value")) === true){
+        console.log("Пошло");
     }
 
 }
@@ -194,7 +207,6 @@ function test4() {
 
     var big_col = document.getElementById("count");
 
-    // console.log(big);
 
     big.removeAttribute("src");
     big.setAttribute("src", min.getAttribute("src"));
@@ -211,6 +223,14 @@ function test4() {
     else {
         like.setAttribute("src", inactive_like);
     }
+    while(cont.hasChildNodes()){
+        cont.removeChild(cont.firstChild);
+    }
+
+    if (myAJAX4("/gallery/arrcommit", min.getAttribute("data-value")) === true){
+        console.log("Пошло");
+    }
+
 }
 
 var myAJAX = function(pathLine, img)
@@ -259,7 +279,7 @@ var myAJAX = function(pathLine, img)
                 count.setAttribute('data_name', number);
             }
             else
-                location.assign('/user/login');
+                alert("Войдите в аккаунт чтобы поставить лайк!");
 
         }
         else{
@@ -272,15 +292,8 @@ var myAJAX = function(pathLine, img)
                 count.setAttribute('data_name', number);
             }
             else
-                location.assign('/user/login');
+                alert("Войдите в аккаунт чтобы убрать лайк!");
         }
-
-            // console.log(big.getAttribute("data-value"));
-        // console.log(like.getAttribute("src"));
-
-
-
-
 
     }
 
