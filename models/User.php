@@ -244,7 +244,7 @@ class User{
     {
         $id = intval($foto);
         $db      = DB::getConnection();
-        $sql     = "DELETE FROM foto WHERE id = :id; DELETE FROM like_photo WHERE foto_id = :id;";
+        $sql     = "DELETE FROM foto WHERE id = :id; DELETE FROM like_photo WHERE foto_id = :id; DELETE FROM comment WHERE foto_id = :id";
         $result = $db->prepare($sql);
         $result->bindParam(':id', $id, PDO::PARAM_INT);
         $result->execute();

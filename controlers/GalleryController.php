@@ -12,8 +12,7 @@ class GalleryController{
     $gallerylist = Gallery::getGalleryList($page);
 
     $total = Gallery::getTotalFoto();
-//var_dump($_SESSION['user_name']);
-//exit(1);
+
         $name = Gallery::name();
         if ($name == false)
         {
@@ -26,7 +25,7 @@ class GalleryController{
             $commentsList = Gallery::getComment($userId);
             $text = "";
         }
-
+//        var_dump($_SESSION['user_name']);
 
     $pagination = new Pagination($total, $page, Gallery::SHOW_BY_DEFAULT, 'page-');
 
@@ -92,8 +91,13 @@ class GalleryController{
             echo "false";
         else{
             Gallery::putComment($name, $foto, $comment);
+            $id_user_foto = Gallery::idFotouser($foto);
+//            $email_user = Gallery::searchEmail($name);
+            $email_foto = Gallery::searchEmail($id_user_foto);
+            Gallery::alertEmail($email_foto);
             echo "true";
         }
+
 
 //        $array = array("1","2","3");
 //

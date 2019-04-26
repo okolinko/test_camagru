@@ -11,6 +11,7 @@
 <body>
 <header>
     <div class="flex-top">
+        <div class="avatar"> <img class="avat" src="/resurses/avatar.png" alt=""> </div>
         <img class="top-elem" src="/resurses/epos4am8qj4o.png" alt="">
         <?php if (isset($_SESSION['user_name'])): ?>
             <div><span class="com"> Приветствуем вас,</span> <span style="color: darkred; margin-left: 3%; margin-left: 2% "> <?php echo ' '.$_SESSION['lol'].'!';?></span></div>

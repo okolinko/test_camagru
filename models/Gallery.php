@@ -171,6 +171,33 @@ class Gallery
         $result->execute();
     }
 
+    public static function searchEmail($name){
+        $user_id = intval($name);
+
+        $db = DB::getConnection();
+        $sql = 'SELECT `email` FROM `register` WHERE `id` = :user_id';
+        $result = $db->prepare($sql);
+        $result->bindParam(':user_id', $name, PDO::PARAM_INT);
+        $result->execute();
+        $row = $result->fetch();
+        return ($row[0]);
+    }
+    public static function idFotouser($foto){
+        $foto_id = intval($foto);
+        $db = DB::getConnection();
+        $sql = 'SELECT user_id FROM foto WHERE id = :foto_id';
+        $result = $db->prepare($sql);
+
+        $result->bindParam(':foto_id', $foto_id, PDO::PARAM_INT);
+        $result->execute();
+
+        $r = $result->fetch();
+        return($r[0]);
+    }
+    public static function alertEmail($foto_email){
+        mail($foto_email, "Новое действие", ' На сайте "Camagru" вашей фото был оставлен коментарий от пользователя '.$_SESSION['lol'].'  Перейдите по ссылке чтобы посмотреть http://localhost:8080');
+    }
+
 }
 
-//INSERT INTO `comment` (`user_id`, `foto_id`, `comment`) VALUES (1, 1, 2) - добавление комита
+//SELECT `email` FROM `register` WHERE `id` = :user_id - вытаскиваем емейл

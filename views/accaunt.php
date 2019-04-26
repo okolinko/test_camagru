@@ -1,4 +1,5 @@
 <?php include ROOT.'/views/header.php';?>
+<?php include_once ROOT.'/template/func/download.php';?>
 <?php if (isset($_SESSION['user_name'])): ?>
     <div style="right:"> <span class="com"> Приветствуем вас,</span><span style="margin-left: 1%" class="user">  <?php echo ' '.$user['user_name'].'!';?></span></div>
 <?php //else: ?>
@@ -6,19 +7,43 @@
 <?php endif; ?>
 <div class="info_flex">
     <div class="email">
-        <p style="width: 100%; margin-left: -15%" class="com"> Email:<?php echo $user['email']?></p>
+        <div class="em"> <p style="width: 100%; margin-left: -10%; margin-top: -15%" class="com"> Email:<?php echo $user['email']?></p></div>
     </div>
     <div class="email">
         <form action="/account/edit/" method="post">
-            <input style="width: 150%; margin-left: -28%" type="submit" value="Изменить пароль" />
+            <input style="width: 100%; margin-left: -45%" type="submit" value="Изменить пароль" />
     </form>
     </div>
     <div class="email">
         <form action="/account/delete/" method="post">
-            <input style="width: 150%; margin-left: -20%" type="submit" value="Удалить аккаунт" />
+            <input style="width: 100%; margin-left: -30%" type="submit" value="Удалить аккаунт" />
         </form>
     </div>
 </div>
+    <div class="down_im">
+        <form method="post" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <input type="submit" value="Загрузить файл!">
+        </form>
+        <?php
+        // если была произведена отправка формы
+        if(isset($_FILES['file'])) {
+            // проверяем, можно ли загружать изображение
+            $check = can_upload($_FILES['file']);
+
+            if($check === true){
+                // загружаем изображение на сервер
+                make_upload($_FILES['file']);
+                echo "<strong>Файл успешно загружен!</strong>";
+            }
+            else{
+                // выводим сообщение об ошибке
+                echo "<strong>$check</strong>";
+            }
+        }
+        ?>
+    </div>
+
 <section class="wrap">
     <div class="foto_ac" >
     <?php if (!empty($foto)): ?>

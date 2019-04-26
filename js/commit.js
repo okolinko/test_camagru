@@ -13,12 +13,10 @@ document.getElementById('submit').addEventListener('click', function () {
         var xhr = new XMLHttpRequest();
 
         xhr.open("POST", "/gallery/comment", false);
-console.log(id_user);
         xhr.onreadystatechange = function () {
             if (xhr.readyState == 4 && xhr.status == 200) {
                 if (xhr.responseText && id_user > 0) {
                     var div = document.createElement('div');
-                    // console.log(xhr.responseText);
                     div.className = "commentin";
                     div.innerHTML = '<span class="name">' + name_user + "  : " + '</span>' + '<span class="com">' + text + '</span>';
                     cont.appendChild(div);
@@ -26,9 +24,6 @@ console.log(id_user);
                 else {
                     alert("войдите в аккаунт чтобы оставить коментарий!");
                 }
-                // var array = JSON.parse(xhr.responseText);
-                //
-                // console.log(array);
             }
         }
         xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
