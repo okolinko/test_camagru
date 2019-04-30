@@ -32,7 +32,7 @@ window.onload = function(){
     var capTureMe = function (){
         test = true;
         if (!videoStreamUrl)
-            alert('То-ли вы не нажали "разрешить" в верху окна, то-ли что-то не так с вашим видео стримом');
+            alert('Нажмите "разрешить" в верху окна, или что-то не так с вашим видео стримом');
         //переворачиваем canvas зеркально по горизонтали
         context.translate(canvas.width, 0);
         context.scale(-1, 1);
@@ -43,6 +43,18 @@ window.onload = function(){
         reset_img = context.getImageData(0,0,800, 600);
         context.setTransform(1,0,0,1,0,0);
         //убираем все кастомные трансформации canvas
+    }
+
+    var download = function(){
+
+        var img = new Image();
+        img.src = "/resurses/gallery/img-02.jpg";
+
+        img.onload = function() {
+            context.drawImage(img, 0, 0, video.width, video.height);
+            reset_img = context.getImageData(0,0,800, 600);
+            context.setTransform(1,0,0,1,0,0);
+        };
     }
 
     var cepia = function(){
@@ -231,21 +243,6 @@ window.onload = function(){
         //var base64dataUrl = canvas.toDataURL('img/png');
     }
 
-
-
-
-    var download = function(){
-
-        var img = new Image();
-        img.src = "/resurses/avatar.png";
-
-        img.onload = function() {
-            context.drawImage(img, 10, 10);
-        };
-
-        alert(1);
-        context.putImageData(img, 0, 0);
-    }
 
 
     //помещаем фотографию на стр

@@ -3,10 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="949fcd76-ca69-4523-a166-10d3f90ab786" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controlers/GalleryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controlers/GalleryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/commit.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/commit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Gallery.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Gallery.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Archive.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/Router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/setup.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/setup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/foto.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/foto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resurses/5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resurses/avatar/avatar1.png" beforeDir="false" afterPath="$PROJECT_DIR$/resurses/avatar/avatar1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resurses/gallery/1-foto_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resurses/gallery/1-foto_11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resurses/gallery/1-foto_6.png" beforeDir="false" afterPath="$PROJECT_DIR$/resurses/gallery/1-foto_6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resurses/gallery/1-foto_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resurses/gallery/1-foto_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resurses/gallery/1-foto_9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resurses/gallery/3-foto_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resurses/gallery/4-foto_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resurses/home.png" beforeDir="false" afterPath="$PROJECT_DIR$/resurses/home.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/template/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/accaunt.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/accaunt.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/foto.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/foto.php" afterDir="false" />
@@ -23,31 +34,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/accaunt.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="43" column="10" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="10" />
+            <state relative-caret-position="328">
+              <caret line="22" column="48" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="600">
+              <caret line="40" selection-start-line="40" selection-end-line="40" />
               <folding>
-                <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#form#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#form#0;n#div#2;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controlers/GalleryController.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/foto.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controlers/FotoController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+            <state relative-caret-position="-3290">
+              <caret line="57" column="5" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -55,8 +64,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="552" column="33" selection-start-line="552" selection-start-column="33" selection-end-line="552" selection-end-column="33" />
+            <state relative-caret-position="120">
+              <caret line="672" column="5" selection-start-line="672" selection-start-column="5" selection-end-line="672" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controlers/MainController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -64,10 +82,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/foto.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="58" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
+            <state relative-caret-position="585">
+              <caret line="61" column="64" selection-start-line="61" selection-start-column="64" selection-end-line="61" selection-end-column="64" />
               <folding>
-                <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -82,41 +101,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/header.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/db_params.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="107" selection-start-line="12" selection-start-column="107" selection-end-line="12" selection-end-column="107" />
-              <folding>
-                <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="135">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controlers/AccountController.php">
+        <entry file="file://$PROJECT_DIR$/config/setup.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+            <state relative-caret-position="240">
+              <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/User.php">
+        <entry file="file://$PROJECT_DIR$/config/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="54" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/Router.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+            <state relative-caret-position="90">
+              <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -125,24 +132,9 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>comment</find>
-      <find>comment_foto</find>
-      <find>getComment</find>
-      <find>Приветствуем вас</find>
-      <find>jpg</find>
-      <find>commentin</find>
-      <find>com</find>
-      <find>addc</find>
-      <find>.button</find>
-      <find>.con</find>
-      <find>con</find>
-      <find>user/login</find>
-      <find>Гость</find>
-      <find>гость</find>
       <find>item</find>
       <find>pagination_centr</find>
       <find>images</find>
-      <find>foto</find>
       <find>#b</find>
       <find>commenti</find>
       <find>#vi</find>
@@ -155,6 +147,21 @@
       <find>email</find>
       <find>cont</find>
       <find>foto_b</find>
+      <find>1</find>
+      <find>flex-el</find>
+      <find>flex-ele</find>
+      <find>flex-elem</find>
+      <find>flex-c</find>
+      <find>delete</find>
+      <find>alert</find>
+      <find>action</find>
+      <find>ROOT . '/</find>
+      <find>pre</find>
+      <find>foto</find>
+      <find>video</find>
+      <find>#video</find>
+      <find>el_3</find>
+      <find>canvas</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -166,7 +173,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/views/reg.html" />
         <option value="$PROJECT_DIR$/views/test.html" />
         <option value="$PROJECT_DIR$/views/foto.html" />
         <option value="$PROJECT_DIR$/controlers/SiteController.php" />
@@ -192,7 +198,6 @@
         <option value="$PROJECT_DIR$/views/register.php" />
         <option value="$PROJECT_DIR$/template/css/style_reg.css" />
         <option value="$PROJECT_DIR$/views/footer.php" />
-        <option value="$PROJECT_DIR$/config/setup.php" />
         <option value="$PROJECT_DIR$/controlers/AccountController.php" />
         <option value="$PROJECT_DIR$/views/edit.php" />
         <option value="$PROJECT_DIR$/views/download.php" />
@@ -202,21 +207,23 @@
         <option value="$PROJECT_DIR$/.htaccess" />
         <option value="$PROJECT_DIR$/js/delete.js" />
         <option value="$PROJECT_DIR$/js/my.js" />
-        <option value="$PROJECT_DIR$/js/foto.js" />
         <option value="$PROJECT_DIR$/js/like.js" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/views/gallery.php" />
         <option value="$PROJECT_DIR$/config/routes.php" />
-        <option value="$PROJECT_DIR$/components/Router.php" />
         <option value="$PROJECT_DIR$/js/commit.js" />
         <option value="$PROJECT_DIR$/models/User.php" />
         <option value="$PROJECT_DIR$/models/Gallery.php" />
-        <option value="$PROJECT_DIR$/template/css/style.css" />
-        <option value="$PROJECT_DIR$/views/foto.php" />
-        <option value="$PROJECT_DIR$/views/accaunt.php" />
         <option value="$PROJECT_DIR$/controlers/GalleryController.php" />
         <option value="$PROJECT_DIR$/template/func/download.php" />
+        <option value="$PROJECT_DIR$/template/func/avatar.php" />
+        <option value="$PROJECT_DIR$/views/accaunt.php" />
         <option value="$PROJECT_DIR$/views/header.php" />
+        <option value="$PROJECT_DIR$/config/setup.php" />
+        <option value="$PROJECT_DIR$/components/Router.php" />
+        <option value="$PROJECT_DIR$/template/css/style.css" />
+        <option value="$PROJECT_DIR$/js/foto.js" />
+        <option value="$PROJECT_DIR$/views/foto.php" />
       </list>
     </option>
   </component>
@@ -229,9 +236,9 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="754" />
+    <option name="x" value="715" />
     <option name="y" value="94" />
-    <option name="width" value="1907" />
+    <option name="width" value="1760" />
     <option name="height" value="1265" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -240,7 +247,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -276,13 +282,24 @@
             <path>
               <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
               <item name="htdocs" type="462c0819:PsiDirectoryNode" />
+              <item name="resurses" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="htdocs" type="462c0819:PsiDirectoryNode" />
+              <item name="resurses" type="462c0819:PsiDirectoryNode" />
+              <item name="gallery" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="htdocs" type="462c0819:PsiDirectoryNode" />
               <item name="template" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
               <item name="htdocs" type="462c0819:PsiDirectoryNode" />
               <item name="template" type="462c0819:PsiDirectoryNode" />
-              <item name="func" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
@@ -293,6 +310,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -405,18 +423,19 @@
       <workItem from="1556018323354" duration="14725000" />
       <workItem from="1556174027145" duration="10584000" />
       <workItem from="1556184902101" duration="298000" />
-      <workItem from="1556264490667" duration="9390000" />
+      <workItem from="1556264490667" duration="9581000" />
+      <workItem from="1556609522812" duration="11108000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="429003000" />
+    <option name="totallyTimeSpent" value="440302000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="754" y="94" width="1907" height="1265" extended-state="0" />
+    <frame x="715" y="94" width="1760" height="1265" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26380697" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28928986" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -429,7 +448,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.26939473" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.26939473" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -462,7 +481,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/controlers/LoginController.php" />
     <entry file="file://$PROJECT_DIR$/style/style_reg.css" />
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/superglobals/_superglobals.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -479,7 +497,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.php" />
     <entry file="file://$PROJECT_DIR$/resurses/gallery1-foto7.jpg" />
     <entry file="file://$PROJECT_DIR$/resurses/gallery/1-foto6.jpg" />
     <entry file="file://$PROJECT_DIR$/image/user_id1-foto7.jpg" />
@@ -498,13 +515,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/db_params.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/Pagination.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1076">
@@ -512,7 +522,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/setup.php" />
     <entry file="file://$PROJECT_DIR$/template/css/style_gallery.css" />
     <entry file="file://$PROJECT_DIR$/template/css/style_reg.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -540,13 +549,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="31" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controlers/MainController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -588,13 +590,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/foto.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="913">
-          <caret line="317" column="46" lean-forward="true" selection-start-line="317" selection-start-column="46" selection-end-line="317" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/like.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
@@ -609,13 +604,6 @@
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/gallery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -636,10 +624,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.php">
+    <entry file="file://$PROJECT_DIR$/models/Gallery.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="49" lean-forward="true" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="49" />
+        <state relative-caret-position="947">
+          <caret line="197" column="175" selection-start-line="197" selection-start-column="175" selection-end-line="197" selection-end-column="175" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controlers/GalleryController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controlers/FotoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -650,6 +652,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/template/func/avatar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/gallery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="20" lean-forward="true" selection-start-column="14" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/setup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/db_params.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/models/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -657,50 +697,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/controlers/MainController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/components/Router.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        <state relative-caret-position="719">
+          <caret line="69" column="13" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/Gallery.php">
+    <entry file="file://$PROJECT_DIR$/views/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="947">
-          <caret line="197" column="175" selection-start-line="197" selection-start-column="175" selection-end-line="197" selection-end-column="175" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="552" column="33" selection-start-line="552" selection-start-column="33" selection-end-line="552" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/accaunt.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" column="10" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="10" />
+        <state relative-caret-position="600">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
           <folding>
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#form#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#form#0;n#div#2;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controlers/GalleryController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controlers/FotoController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -711,23 +728,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/template/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="672" column="5" selection-start-line="672" selection-start-column="5" selection-end-line="672" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/accaunt.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="22" column="48" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/foto.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="58" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
+        <state relative-caret-position="585">
+          <caret line="61" column="64" selection-start-line="61" selection-start-column="64" selection-end-line="61" selection-end-column="64" />
           <folding>
-            <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/header.php">
+    <entry file="file://$PROJECT_DIR$/js/foto.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="107" selection-start-line="12" selection-start-column="107" selection-end-line="12" selection-end-column="107" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="-3290">
+          <caret line="57" column="5" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
         </state>
       </provider>
     </entry>

@@ -1,3 +1,4 @@
+<?php require_once ROOT.'/template/func/avatar.php' ?>
 <!DOCTYPE>
 <html>
 <head>
@@ -11,7 +12,9 @@
 <body>
 <header>
     <div class="flex-top">
-        <div class="avatar"> <img class="avat" src="/resurses/avatar.png" alt=""> </div>
+        <div class="avatar">
+            <img class="avat" src="/resurses/avatar/<?php echo $avatar ?>" alt="">
+        </div>
         <img class="top-elem" src="/resurses/epos4am8qj4o.png" alt="">
         <?php if (isset($_SESSION['user_name'])): ?>
             <div><span class="com"> Приветствуем вас,</span> <span style="color: darkred; margin-left: 3%; margin-left: 2% "> <?php echo ' '.$_SESSION['lol'].'!';?></span></div>
@@ -38,7 +41,7 @@
 </header>
 <div class="foto_flex">
         <div  id="el_1">
-            <button type="button" id="button" name="button"><img  width=50px src="/resurses/zat.png" width=100% ></button>
+            <button style="width: 90px" type="button" id="button" name="button"><img  width=50px src="/resurses/zat.png" width=100% ></button>
 
             <button style="margin-top: 5%; padding: 1em;" type="button" id="button8" name="button8">Download</button>
 <!--            <input id = "im"; style="display: block; width: 100px;margin-top: 30%" type="file" name="image" onchange="previewFile()" multiple accept="image/*,image/jpeg">-->
@@ -66,6 +69,5 @@
     <div id="output"></div>
 </section>
 <?php include ROOT.'/views/footer.php';?>
-<!--<script src="/js/foto.js"></script>-->
 </body>
 </html>

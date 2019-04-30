@@ -1,3 +1,4 @@
+<?php require_once ROOT.'/template/func/avatar.php' ?>
 <!DOCTYPE>
 <html>
 <head>
@@ -10,12 +11,9 @@
 <body>
 <header>
 <div class="flex-top">
-    <div class="avatar"><?php $name = "avatar"; $file = $name.$_SESSION['user_name'].'.png'; $filename = '/resurses/avatar/'.$file; if (isset($filename)) {
-            echo "The file $filename exists";
-        } else {
-            echo "The file $filename does not exist";
-        }
-        ?> <img class="avat" src="/resurses/avatar/<?php $name = "avatar"; echo $name.$_SESSION['user_name'].'.png' ?>" alt=""> </div>
+    <div class="avatar">
+        <img class="avat" src="/resurses/avatar/<?php echo $avatar ?>" alt="">
+    </div>
     <img class="top-elem" src="/resurses/epos4am8qj4o.png" alt="">
     <?php if (isset($_SESSION['user_name'])): ?>
         <div><span style="padding-left: 5%;" class="com"> Приветствуем вас,</span> <span class="user"> <?php echo ' '.$_SESSION['lol'].' !';?></span></div>
@@ -40,5 +38,3 @@
     </ul>
 </nav>
 </header>
-
-<!--if ($_SESSION['user_name'] == null) {$_SESSION['user_name'] = "";}-->
