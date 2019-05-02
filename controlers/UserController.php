@@ -42,12 +42,12 @@ class UserController{
                 $errors[] = 'Такой email уже используется';
             }
             if (User::checkNameExists($name)){
-                $errors[] = 'Ткое имя уже используется';
+                $errors[] = 'Такое имя уже используется';
             }
 
             if ($errors == false){
                 $this->result = User::register($name, $email, $password);
-                echo "<div style=\"background-color: green; text-align:center;\"> Аккаунт зарегистрирован. Код активации отправлен на почту $email</div>";
+                echo "<div style=\"background-color: indigo; text-align:center;\"> Аккаунт зарегистрирован. Код активации отправлен на почту $email</div>";
             }
             $this->errors = $errors;
         }

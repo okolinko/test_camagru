@@ -344,16 +344,17 @@ input:focus {
 
 
 #canvas{
-    width: 160%;
+    width: 170%;
     height: auto;
-    padding-top: 120%;
-    padding-left: 2%;
+    margin-top: 8em;
+    margin-left: 6em;
 }
 
 #video{
-    width: 750%;
-    height: 89%;
-    margin-left: -3em;
+    width: 100%;
+    height: auto;
+    margin-left: 1em;
+    margin-top: 3em;
 }
 #button{
     margin-right: 1%;
@@ -399,14 +400,19 @@ section{
 }
 .com{
     padding-left: 1%;
-    font-family: 'Rye', cursive;
+    font-family: 'fantasy', cursive !important;
+    /*font-style: oblique;*/
     margin-left: 3%;
     color: slateblue;
     font-size: 2vh;
     text-shadow:#000 0px 1px 1px;
 }
+code{
+    font-family: 'fantasy', cursive !important;
+}
 span{
     font-family: 'Rye', cursive;
+    color: slateblue;
 }
 
 plaintext{
@@ -433,7 +439,7 @@ plaintext{
     display: inline-flex;
 }
 #addComment{
-    padding-top: 10%;
+    padding-top: 4em;
     padding-left: -100px;
     width: 200%;
 }
@@ -449,7 +455,7 @@ plaintext{
     transition: 1s;
 }
 .comment_foto{
-    padding-top: 5%;
+    padding-top: -2em;
     padding-left: 11.1%;
 }
 
@@ -461,8 +467,7 @@ plaintext{
     overflow-x: auto;
 }
 #cont{
-    margin-top: 10%;
-    /*background-color: #F5F5F5;*/
+    margin-top: 4em;
     border-radius: 15px;
     height: 250px;
     width: 70%;
@@ -580,6 +585,23 @@ button:active {
 }
 
 
+.down_foto {
+
+    margin-top: -8em;
+    position: relative;
+    overflow: hidden;
+}
+
+.down_foto label {
+    top: 2em;
+    left: 1em;
+    cursor: pointer;
+    /*display: none;*/
+}
+
+.dw{
+    width: 7em;
+}
 
 @media (max-width: 645px) {
     .openMenu {
@@ -640,7 +662,7 @@ button:active {
         width: 50%;
     }
     #el_4{
-        margin-top: 0.1em;
+        margin-top: 13.5em;
         height: 20%;
         width: 95%;
     }
@@ -668,13 +690,8 @@ button:active {
     #canvas{
         width: 100%;
         height: auto;
-        margin-top: -125px;
-        margin-left: -50px;
-    }
-    #video{
-        width: 150%; 
-        height: 150%;
-        margin-left: -35px;
+        margin-top: 24em;
+        margin-left: -70px;
     }
     .comment_foto{
          margin-left: -10em;
@@ -708,8 +725,6 @@ button:active {
         margin-top: -8em;
     }
     .foto_big{
-        height: 300px;
-        width: 280px;
         margin-left: -1em;
     }
     .info_flex{
@@ -733,9 +748,9 @@ button:active {
         margin-left: 7.2em;
     }
     #img4{
-        width: 140%;
-        height: 40%;
-        /*margin-top: -10em;*/
+        width: 24em;
+        height: 17em;
+        margin-top: -2em;
     }
     #button{
         margin-right: 1%;
@@ -743,10 +758,11 @@ button:active {
         height: auto;
     }
     #video{
-        margin-top: 120%;
-        width: 250px;
-        height: 250px;
-        margin-left: -25%;
+        margin-top: 23em;
+        width: 150%;
+        height: auto;
+        margin-left: -45%;
+
     }
     .em{
         margin-top: 8.5em;
@@ -763,6 +779,9 @@ button:active {
     }
     .down_avatar{
         width: 23em;
+    }
+    .down_foto {
+        margin-top: -7em;
     }
 
 }

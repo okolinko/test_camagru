@@ -14,13 +14,13 @@
  <div id="error">
 
           <?php if ($this->result): ?>
-              <p>Вы зарегистрированы!</p>
+              <span class="com" >Вы зарегистрированы!</span>
               <?php else: ?>
                      <?php if (isset($this->errors) && is_array($this->errors))?>
                       <ul>
                      <?php if (is_array($this->errors) || is_object($this->errors))
                      foreach ($this->errors as $error): ?>
-                         <li>  <?php echo $error; ?></li>
+                         <span class="com" ><li><?php echo $error; ?></li></span>
                      <?php endforeach; ?>
                       </ul>
                  <?php endif; ?>
@@ -31,7 +31,6 @@
         <input type="password" name="password2" placeholder="Введите пароль ещё раз" required="required" value="<?php echo $password2; ?>"/>
         <input type="email" name="email" placeholder="Введите email" required="required" value="<?php echo $email; ?>"/>
         <input type="submit" name="submit" class="btn1" value="Регистрация" />
-<!--        <button  class="btn1"><a href="/user/login/" id="button_in">Войти</a></button>-->
         </form>
 </div>
 </body>

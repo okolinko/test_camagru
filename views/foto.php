@@ -17,7 +17,7 @@
         </div>
         <img class="top-elem" src="/resurses/epos4am8qj4o.png" alt="">
         <?php if (isset($_SESSION['user_name'])): ?>
-            <div><span class="com"> Приветствуем вас,</span> <span style="color: darkred; margin-left: 3%; margin-left: 2% "> <?php echo ' '.$_SESSION['lol'].'!';?></span></div>
+            <div><span class="com"> Приветствуем вас,</span> <span class="user"> <?php echo ' '.$_SESSION['lol'].'!';?></span></div>
         <?php else: ?>
             <div><span class="com">Приветствуем вас,</span> <span class="user">Гость</span>!</div>
         <?php endif; ?>
@@ -41,10 +41,11 @@
 </header>
 <div class="foto_flex">
         <div  id="el_1">
-            <button style="width: 90px" type="button" id="button" name="button"><img  width=50px src="/resurses/zat.png" width=100% ></button>
-
-            <button style="margin-top: 5%; padding: 1em;" type="button" id="button8" name="button8">Download</button>
-<!--            <input id = "im"; style="display: block; width: 100px;margin-top: 30%" type="file" name="image" onchange="previewFile()" multiple accept="image/*,image/jpeg">-->
+            <button style="width: 90px" type="button" id="button" name="button"><img  width=50px src="/resurses/zat.png" width=100% ></button><br/>
+        <div class="down_foto">
+            <label>File:</label><br/>
+            <input class="dw" type="file" id="imageLoader" name="imageLoader"/>
+        </div>
         </div>
         <div class="elem_foto_cam" id="el_2"><video id="video" width="800" height="600" autoplay="autoplay"></video></div>
     <div id="el_3"> <canvas id="canvas" width="800" height="600"></canvas></div>

@@ -32,11 +32,11 @@
             if($check === true){
                 // загружаем изображение на сервер
                 make_upload($_FILES['file']);
-                echo "<strong>Файл успешно загружен!</strong>";
+                echo "<span>Файл успешно загружен!</span>";
             }
             else{
                 // выводим сообщение об ошибке
-                echo "<strong>$check</strong>";
+                echo "<span>$check</span>";
             }
         }
         ?>

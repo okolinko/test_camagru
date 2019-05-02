@@ -24,6 +24,7 @@ window.onload = function(){
     var videoStreamUrl = false;
     var reset = $('reset');
     var reset_img;
+    var imageLoader = $('imageLoader');
 
     var test = false;
 
@@ -45,9 +46,30 @@ window.onload = function(){
         //убираем все кастомные трансформации canvas
     }
 
-    var download = function(){
+    function handleImage(e){
+        test = true;
+        var reader = new FileReader();
+        reader.onload = function(event){
+            var img = new Image();
+            img.onload = function(){
+                canvas.width = video.width;
+                canvas.height = video.height;
+                context.drawImage(img, 0, 0, video.width, video.height);
+                reset_img = context.getImageData(0,0,800, 600);
+                context.setTransform(1,0,0,1,0,0);
+            }
+            img.src = event.target.result;
+        }
+        reader.readAsDataURL(e.target.files[0]);
+    }
 
+
+
+    var download = function(){
+        test = true;
         var img = new Image();
+        var foto = document.getElementById("down_foto");
+        console.log(foto);
         img.src = "/resurses/gallery/img-02.jpg";
 
         img.onload = function() {
@@ -325,7 +347,7 @@ window.onload = function(){
     button5.addEventListener('click', nose);
     button6.addEventListener('click', invert);
     button7.addEventListener('click', more);
-    button8.addEventListener('click', download);
+    imageLoader.addEventListener('change', handleImage, false);
     frame1.addEventListener('click', function() { frame("/template/img/r1.png");}, false);
     frame2.addEventListener('click', function() { frame("/template/img/r4.png");}, false);
     frame3.addEventListener('click', function() { frame("/template/img/r5.png");}, false);

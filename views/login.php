@@ -15,7 +15,7 @@
          <ul>
              <?php if (is_array($errors) || is_object($errors))
                  foreach ($errors as $error): ?>
-                 <li> - <?php echo $error; ?></li>
+                 <span class="com" ><li> <?php echo $error; ?></li></span>
              <?php endforeach; ?>
          </ul>
      <?php endif; ?>
@@ -24,7 +24,6 @@
         <input type="email" name="email" placeholder="Email" required="required">
         <input type="password" name="password" placeholder="Пароль" required="required">
         <input type="submit" name="submit" class="btn1" value="Войти" />
-<!--        <button  class="btn1"><a href="/user/register/" id="button_in">Регистрация</a></button>-->
     </form>
 </div>
 </body>

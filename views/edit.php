@@ -11,14 +11,14 @@
 <div class="reg_but"><p><a href="/main/" ><img id="button" src="/resurses/home.png" alt="На главную"></a></p></div>
 <div class="login">
     <h1>Изменение данных</h1>
-    <?php if ($result): ?><p>Данные изминены!</p>
+    <?php if ($result): ?><span style="padding-left: 3em" class="com" >Данные изминены !</span>
     <?php else: ?>
     <div id="error">
         <?php if (isset($errors) && is_array($errors)): ?>
             <ul>
                 <?php if (is_array($errors) || is_object($errors))
                     foreach ($errors as $error): ?>
-                        <li> - <?php echo $error; ?></li>
+                        <span class="com" ><li> <?php echo $error; ?></li></span>
                     <?php endforeach; ?>
             </ul>
         <?php endif; ?>
@@ -27,7 +27,7 @@
         <input type="text" name="text" placeholder="Введите имя" required="required" value=""/>
         <input type="password" name="password" placeholder="Введите пароль" required="required" value=""/>
         <input type="password" name="password2" placeholder="Введите пароль ещё раз" required="required" value=""/>
-        <input type="submit" name="submit" class="btn1" value="Сохранить" />
+        <input style="width: 300px" type="submit" name="submit" class="btn1" value="Сохранить" />
     </form>
     <?php endif; ?>
 </div>

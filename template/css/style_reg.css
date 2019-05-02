@@ -105,6 +105,14 @@ input:focus {
 #error{
     width: 400px;
 }
+.com{
+    padding-left: 1%;
+    font-family: 'fantasy', cursive !important;
+    margin-left: 3%;
+    color: slateblue;
+    font-size: 2vh;
+    text-shadow:#000 0px 1px 1px;
+}
 
 @media (max-width: 645px) {
     #button{
