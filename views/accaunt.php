@@ -20,7 +20,7 @@
 </div>
     <div class="down_im">
         <form method="post" enctype="multipart/form-data">
-            <input class="down_avatar" type="file" name="file">
+            <input class="down_avatar" type="file" name="file" multiple accept="image/*">
             <input class="down_avatar" type="submit" value="Загрузить аватар!">
         </form>
         <?php

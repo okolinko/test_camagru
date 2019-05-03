@@ -44,7 +44,7 @@
             <button style="width: 90px" type="button" id="button" name="button"><img  width=50px src="/resurses/zat.png" width=100% ></button><br/>
         <div class="down_foto">
             <label>File:</label><br/>
-            <input class="dw" type="file" id="imageLoader" name="imageLoader"/>
+            <input class="dw" type="file" id="imageLoader" name="imageLoader" multiple accept="image/*"/>
         </div>
         </div>
         <div class="elem_foto_cam" id="el_2"><video id="video" width="800" height="600" autoplay="autoplay"></video></div>

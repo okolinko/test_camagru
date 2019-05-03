@@ -308,7 +308,7 @@ window.onload = function(){
                         put(true);
                     else
                     {
-                        alert(1);
+                        alert("Войдите в аккаунт чтобы сохранить фото");
                         put(false);
                     }
                 }
